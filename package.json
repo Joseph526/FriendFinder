@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "An app to find friends with Node and Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joseph526/FriendFinder.git"
+  },
+  "author": "Joseph Bucher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joseph526/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Joseph526/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
