@@ -160,5 +160,34 @@
             </div>
         </footer>
     </div>
+
+    <script type="text/javascript">
+        $("#btnSubmit").on("click", function(event) {
+            event.preventDefault();
+            
+            // Capture user input
+            var newUser = {
+                name: $("#inputName").val().trim(),
+                photo: $("#inputPhoto").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            console.log(newUser);
+
+            $.post("/api/friends", newUser)
+                .then(function(data) {
+                });
+        });
+    </script>
 </body>
 </html>

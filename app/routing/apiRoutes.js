@@ -11,6 +11,7 @@ module.exports = function(app) {
 
     // POST route to update friends
     app.post("/api/friends", function(req, res) {
-        //
-    })
-}
+        friendsData.push(req.body);
+        res.end();
+    });
+};
