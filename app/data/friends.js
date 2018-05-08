@@ -2,7 +2,7 @@
 var friendsArr = [
     {
         name: "Bob",
-        photo: "http://spongebob.wikia.com/wiki/File:SpongeBob_(5).png",
+        photo: "https://vignette.wikia.nocookie.net/spongebob/images/e/e4/SpongeBob_%285%29.png",
         scores: [1, 5, 3, 2, 5, 3, 2, 4, 1, 4]
     },
     {
