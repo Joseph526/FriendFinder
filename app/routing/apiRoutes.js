@@ -12,13 +12,28 @@ module.exports = function(app) {
     // POST route to update friends
     app.post("/api/friends", function(req, res) {
         var newUser = req.body;
-                
-        // Loop through all existing friends
+        var friendMatch = {
+            name: "",
+            photo: ""
+        };
+
+        // Loop through all existing friends, only keep track if new scoreToBeat is lower
+        var scoreToBeat;
         for (var j = 0; j < friendsData.length; j++) {
-            var score = friendChecker(newUser, friendsData[j]);
+            newFriendScore = friendChecker(newUser, friendsData[j]);
+            if (newFriendScore <= scoreToBeat) {
+                scoreToBeat = newFriendScore;
+                friendMatch = {
+                    name: friendsData[j].name,
+                    photo: friendsData[j].photo
+                };
+            }
         }
         friendsData.push(newUser);
-        res.end();
+        console.log(friendMatch);
+        
+        // Return JSON of friend match
+        res.json(friendMatch);
     });
 };
 
