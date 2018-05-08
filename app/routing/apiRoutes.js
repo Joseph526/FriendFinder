@@ -18,7 +18,8 @@ module.exports = function(app) {
         };
 
         // Loop through all existing friends, only keep track if new scoreToBeat is lower
-        var scoreToBeat;
+        // Initialize scoreToBeat as arbitrary high number
+        var scoreToBeat = 999;
         for (var j = 0; j < friendsData.length; j++) {
             newFriendScore = friendChecker(newUser, friendsData[j]);
             if (newFriendScore <= scoreToBeat) {
@@ -30,7 +31,6 @@ module.exports = function(app) {
             }
         }
         friendsData.push(newUser);
-        console.log(friendMatch);
         
         // Return JSON of friend match
         res.json(friendMatch);
