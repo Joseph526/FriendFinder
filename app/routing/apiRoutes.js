@@ -22,7 +22,7 @@ module.exports = function(app) {
         var scoreToBeat = 999;
         for (var j = 0; j < friendsData.length; j++) {
             newFriendScore = friendChecker(newUser, friendsData[j]);
-            if (newFriendScore <= scoreToBeat) {
+            if (newFriendScore < scoreToBeat) {
                 scoreToBeat = newFriendScore;
                 friendMatch = {
                     name: friendsData[j].name,
