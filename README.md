@@ -6,5 +6,8 @@ This is a friend-matching app to connect with like-minded individuals. The user 
 
 Technologies used in this app include Node.js, Express and Body-Parser.
 
+## Deployed Site
+[https://sleepy-chamber-51992.herokuapp.com/](https://sleepy-chamber-51992.herokuapp.com/)
+
 ## My Portfolio
 [https://joseph526.github.io/](https://joseph526.github.io/)
